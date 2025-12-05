@@ -181,7 +181,8 @@
         formData.append("entry.1731737916", businessEmail);  // Replace with actual ID for Email
         formData.append("entry.165269441", service);        // Replace with actual ID for Service
         formData.append("entry.1416573462", address);        // Replace with actual ID for Address
-        formData.append("entry.1162682067", countryCode + "entry.1939211863" + mobileNumber); // Combine or use separate ID
+        formData.append("entry.1162682067", countryCode);
+        formData.append("entry.1939211863", mobileNumber);
         formData.append("entry.859093392", message);        // Replace with actual ID for Message
         // ---------------------------------------------------------
         try {
