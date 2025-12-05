@@ -172,17 +172,17 @@
         // ---------------------------------------------------------
         // TODO: REPLACE THESE VALUES WITH YOUR GOOGLE FORM DETAILS
         // ---------------------------------------------------------
-        const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfA2Pn9j5c3eJurv3PWAkQ2I5O2EHIoW0g1_-C7Hrc_6hg8fQ/formResponse";
+        const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdpFitRIus_W9LbWq2oSNRV-9_-bPCt5mSpMqdZ4KxLPVI88A/formResponse";
 
         // Map your form fields to Google Form Entry IDs
         const formData = new FormData();
-        formData.append("entry.1641885154", firstName);      // Replace with actual ID for First Name
-        formData.append("entry.2036720361", lastName);       // Replace with actual ID for Last Name
-        formData.append("entry.110385626", businessEmail);  // Replace with actual ID for Email
-        formData.append("entry.784458182", service);        // Replace with actual ID for Service
-        formData.append("entry.883707250", address);        // Replace with actual ID for Address
-        formData.append("entry.931859330", countryCode + "entry.184836611" + mobileNumber); // Combine or use separate ID
-        formData.append("entry.83875743", message);        // Replace with actual ID for Message
+        formData.append("entry.1354207388", firstName);      // Replace with actual ID for First Name
+        formData.append("entry.625538273", lastName);       // Replace with actual ID for Last Name
+        formData.append("entry.1731737916", businessEmail);  // Replace with actual ID for Email
+        formData.append("entry.165269441", service);        // Replace with actual ID for Service
+        formData.append("entry.1416573462", address);        // Replace with actual ID for Address
+        formData.append("entry.1162682067", countryCode + "entry.1939211863" + mobileNumber); // Combine or use separate ID
+        formData.append("entry.859093392", message);        // Replace with actual ID for Message
         // ---------------------------------------------------------
 
         try {
