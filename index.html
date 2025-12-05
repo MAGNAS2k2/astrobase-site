@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Astrobase | Launch → In-Overlay Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div id="launch-overlay" aria-hidden="true">
+    <img src="rocket-removebg-preview.png" alt="" class="sequence-rocket" id="seq-rocket" tabindex="-1">
+    <div class="explosion-burst" id="seq-explosion" aria-hidden="true"></div>
+
+    <div class="overlay-panel" id="overlay-panel" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+      <div class="overlay-header">
+        <h2 id="overlay-title">Mission Control</h2>
+        <div>
+          <button class="overlay-close" id="overlay-close">Close</button>
+        </div>
+      </div>
+
+      <div class="overlay-services-grid" id="overlay-services-grid">
+        <div class="overlay-card" data-service="E-Commerce Orbit">
+          <h3>E-Commerce Orbit</h3>
+          <p>End-to-end account management for Amazon & Flipkart. Listings, cataloging, and account health to keep
+            growth steady.</p>
+        </div>
+        <div class="overlay-card" data-service="Digital Propulsion">
+          <h3>Digital Propulsion</h3>
+          <p>SEO, SMM and PPC strategies tailored for visibility and conversion — real traction, measurable lifts.</p>
+        </div>
+        <div class="overlay-card" data-service="Web Launchpads">
+          <h3>Web Launchpads</h3>
+          <p>Shopify and WordPress launch pads with optimized UI/UX and scalable architecture for high-traffic
+            campaigns.</p>
+        </div>
+        <div class="overlay-card" data-service="Strategic Trajectory">
+          <h3>Strategic Trajectory</h3>
+          <p>Data-driven consulting to map competitive advantage and create a repeatable growth flight plan.</p>
+        </div>
+      </div>
+
+      <form id="service-quote-form" class="overlay-form" hidden>
+        <div class="overlay-form-header">
+
+          <h3 id="form-title">Request a Quote</h3>
+        </div>
+
+        <div class="form-row two-cols">
+          <div>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" required>
+          </div>
+          <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName">
+          </div>
+        </div>
+
+        <div>
+          <label for="businessEmail">Business Email*</label>
+          <input type="email" name="businessEmail" id="businessEmail" required>
+        </div>
+
+        <div>
+          <label for="service-select">Select Service*</label>
+          <select name="service" id="service-select" required>
+            <option value="" disabled selected>Please Select</option>
+            <option value="E-Commerce Orbit">E-Commerce Orbit</option>
+            <option value="Digital Propulsion">Digital Propulsion</option>
+            <option value="Web Launchpads">Web Launchpads</option>
+            <option value="Strategic Trajectory">Strategic Trajectory</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="address">Address*</label>
+          <input type="text" name="address" id="address" required>
+        </div>
+
+        <div>
+          <label for="mobileNumber">Mobile Number*</label>
+          <div class="mobile-input-group">
+            <select name="countryCode" class="country-select">
+              <option value="+91">India +91</option>
+              <option value="+1">USA +1</option>
+              <option value="+44">UK +44</option>
+            </select>
+            <input type="tel" name="mobileNumber" id="mobileNumber" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Message*</label>
+          <textarea name="message" id="message" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+
+      <div id="form-success" class="form-success" hidden>
+        <h3>Transmission Received!</h3>
+        <p>Your request has been logged. Our flight crew will contact you shortly.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <header id="main-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Astrobase Logo" class="logo-img">
+      <div class="brand-wrapper">
+        <div class="brand-name">Astrobase</div>
+        <div class="brand-sub">Ecom Services</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#why-astrobase">Why Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="space-background" aria-hidden="true">
+      <div class="stars-layer layer-1"></div>
+      <div class="stars-layer layer-2"></div>
+      <div class="stars-layer layer-3"></div>
+    </div>
+
+    <div class="hero-content" id="hero-text-content">
+      <h1>Launch Your Brand Into Orbit</h1>
+      <p class="hero-sub">
+        We provide the propulsion systems for your Amazon, Flipkart, and Digital Marketing growth.
+        Mission control for your e-commerce success.
+      </p>
+      <button class="cta-btn" id="launch-button" aria-haspopup="dialog" aria-controls="launch-overlay">Initiate Launch
+        Sequence</button>
+    </div>
+
+    <div class="rocket-container" id="hero-rocket-container" aria-hidden="true">
+      <div class="rocket-shaker">
+        <div class="rocket-fire" aria-hidden="true">
+          <div class="flame-core"></div>
+          <div class="flame-outer"></div>
+        </div>
+        <img src="rocket-removebg-preview.png" alt="Rocket" class="rocket-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="why-astrobase" id="why-astrobase">
+    <h2 class="section-title">Why Choose Astrobase?</h2>
+    <div class="why-grid">
+      <div class="reveal-card">
+        <div class="card-icon">💡</div>
+        <h3>Innovative Trajectories</h3>
+        <p>Out-of-the-box strategic courses for growth.</p>
+      </div>
+      <div class="reveal-card">
+        <div class="card-icon">🎨</div>
+        <h3>Stellar Creativity</h3>
+        <p>Design-forward campaigns that stand out.</p>
+      </div>
+      <div class="reveal-card">
+        <div class="card-icon">🚀</div>
+        <h3>High-Thrust Productivity</h3>
+        <p>Team and processes tuned for delivery.</p>
+      </div>
+      <div class="reveal-card">
+        <div class="card-icon">🎧</div>
+        <h3>Rapid Response</h3>
+        <p>Fast incident turnaround and support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2 class="section-title">Our Expert Services</h2>
+    <div class="services-grid" id="services-grid">
+      <div class="reveal-card" data-service="E-Commerce Orbit">
+        <div class="card-icon">🛒</div>
+        <h3>E-Commerce Orbit</h3>
+        <p>End-to-end account management for Amazon & Flipkart. We handle cataloging and account health.</p>
+      </div>
+      <div class="reveal-card" data-service="Digital Propulsion">
+        <div class="card-icon">📡</div>
+        <h3>Digital Propulsion</h3>
+        <p>SEO, SMM and PPC campaigns to boost reach and conversions.</p>
+      </div>
+      <div class="reveal-card" data-service="Web Launchpads">
+        <div class="card-icon">💻</div>
+        <h3>Web Launchpads</h3>
+        <p>Shopify & WordPress builds with UX optimised for conversion.</p>
+      </div>
+      <div class="reveal-card" data-service="Strategic Trajectory">
+        <div class="card-icon">🔭</div>
+        <h3>Strategic Trajectory</h3>
+        <p>Market analysis and strategy to discover new growth channels.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-content"
+      style="display:flex; justify-content:space-around; flex-wrap:wrap; max-width:1100px; margin:0 auto; gap:30px;">
+      <div class="footer-col brand-col" style="flex:1; min-width:250px;">
+
+        <div class="logo-container" style="margin-bottom:20px;">
+          <img src="logo.png" alt="Astrobase Logo" class="logo-img">
+          <div class="brand-wrapper">
+            <div class="brand-name">Astrobase</div>
+            <div class="brand-sub">Ecom Service</div>
+          </div>
+        </div>
+
+        <p>Your mission control for e-commerce success. We help businesses launch, grow, and dominate in the digital
+          space.</p>
+      </div>
+      <div class="footer-col" style="flex:0.5; min-width:150px;">
+        <h4 style="color:#fff; margin-bottom:15px;">Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li style="margin-bottom:10px;"><a href="#hero" style="color:#aaa; text-decoration:none;">Home</a></li>
+          <li style="margin-bottom:10px;"><a href="#why-astrobase" style="color:#aaa; text-decoration:none;">About
+              Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" style="flex:1; min-width:250px;">
+        <h4 style="color:#fff; margin-bottom:15px;">Mission Contact</h4>
+        <ul class="contact-info" style="list-style:none; padding:0;">
+          <li style="margin-bottom:10px;"><span class="contact-icon">📞</span><span>+91 8384975889</span></li>
+          <li style="margin-bottom:10px;"><span class="contact-icon">📍</span><span><a
+                href="https://maps.app.goo.gl/UXjd3ukJ4RCk9cQu6"
+                style="color:var(--primary-gold); text-decoration:none;">3rd Floor, M.H. Tower, Tonk Rd, opp. Sector 3,
+                Sanganer, Pratap Nagar, Jaipur, Rajasthan 302033.</a></span></li>
+          <li style="margin-bottom:10px;"><span class="contact-icon">✉️</span><span><a
+                href="mailto:Info@astrobaseecomservices.com"
+                style="color:var(--primary-gold); text-decoration:none;">Info@astrobaseecomservices.com</a></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Astrobase Ecom Service. All systems nominal. Ready for liftoff.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
