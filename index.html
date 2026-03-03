@@ -9,271 +9,437 @@
   <meta name="keywords"
     content="E-commerce services, Amazon account management, Flipkart account management, SEO services, PPC management, Shopify development, WordPress development, Digital marketing">
   <meta name="author" content="Astrobase Ecom Services">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://astrobaseecomservices.com/">
-  <meta property="og:title" content="Astrobase E-Commerce Services | Launch Your Brand Into Orbit">
-  <meta property="og:description"
-    content="Expert e-commerce account management, digital marketing, and web development services to grow your business.">
-  <meta property="og:image" content="https://astrobaseecomservices.com/logo.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://astrobaseecomservices.com/">
-  <meta property="twitter:title" content="Astrobase E-Commerce Services | Launch Your Brand Into Orbit">
-  <meta property="twitter:description"
-    content="Expert e-commerce account management, digital marketing, and web development services to grow your business.">
-  <meta property="twitter:image" content="https://astrobaseecomservices.com/logo.png">
-
   <title>Astrobase E-Commerce Services | Launch Your Brand Into Orbit</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
 </head>
 
 <body>
 
-  <div id="launch-overlay" aria-hidden="true">
-    <img src="rocket-removebg-preview.png" alt="" class="sequence-rocket" id="seq-rocket" tabindex="-1">
-    <div class="explosion-burst" id="seq-explosion" aria-hidden="true"></div>
-
-    <div class="overlay-panel" id="overlay-panel" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
-      <div class="overlay-header">
-        <h2 id="overlay-title">Mission Control</h2>
-        <div>
-          <button class="overlay-close" id="overlay-close">Close</button>
-        </div>
+  <!-- Header Section (Matches Wellsure Header layout) -->
+  <header id="main-header" class="site-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="#hero" class="logo-link">
+          <img src="logo.png" alt="Astrobase Logo" class="logo-img">
+          <div class="brand-text">
+            <span class="brand-name">Astrobase</span>
+          </div>
+        </a>
       </div>
 
-      <div class="overlay-services-grid" id="overlay-services-grid">
-        <div class="overlay-card" data-service="E-Commerce Orbit">
-          <h3>E-Commerce Orbit</h3>
-          <p>End-to-end account management for Amazon & Flipkart. Listings, cataloging, and account health to keep
-            growth steady.</p>
-        </div>
-        <div class="overlay-card" data-service="Digital Propulsion">
-          <h3>Digital Propulsion</h3>
-          <p>SEO, SMM and PPC strategies tailored for visibility and conversion — real traction, measurable lifts.</p>
-        </div>
-        <div class="overlay-card" data-service="Web Launchpads">
-          <h3>Web Launchpads</h3>
-          <p>Shopify and WordPress launch pads with optimized UI/UX and scalable architecture for high-traffic
-            campaigns.</p>
-        </div>
-        <div class="overlay-card" data-service="Strategic Trajectory">
-          <h3>Strategic Trajectory</h3>
-          <p>Data-driven consulting to map competitive advantage and create a repeatable growth flight plan.</p>
-        </div>
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" role="navigation">
+        <ul class="nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#path-to-excellence">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="#services" class="dropdown-toggle">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#digital-marketing">Digital Marketing</a></li>
+              <li class="has-dropdown sub-dropdown">
+                <a href="#marketplace" class="dropdown-toggle">Marketplace Management</a>
+                <ul class="dropdown-menu submenu">
+                  <li><a href="#marketplace">Amazon</a></li>
+                  <li><a href="#marketplace">Flipkart</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contact Info / Action Button -->
+      <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme"
+          style="background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--primary-gold); transition: transform 0.3s;">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <a href="#contact" class="btn-primary header-btn">Get Consultation</a>
       </div>
 
-      <form id="service-quote-form" class="overlay-form" hidden>
-        <div class="overlay-form-header">
-
-          <h3 id="form-title">Request a Quote</h3>
-        </div>
-
-        <div class="form-row two-cols">
-          <div>
-            <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName" required>
-          </div>
-          <div>
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName">
-          </div>
-        </div>
-
-        <div>
-          <label for="businessEmail">Business Email*</label>
-          <input type="email" name="businessEmail" id="businessEmail" required>
-        </div>
-
-        <div>
-          <label for="service-select">Select Service*</label>
-          <select name="service" id="service-select" required>
-            <option value="" disabled selected>Please Select</option>
-            <option value="E-Commerce Orbit">E-Commerce Orbit</option>
-            <option value="Digital Propulsion">Digital Propulsion</option>
-            <option value="Web Launchpads">Web Launchpads</option>
-            <option value="Strategic Trajectory">Strategic Trajectory</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="address">Address*</label>
-          <input type="text" name="address" id="address" required>
-        </div>
-
-        <div>
-          <label for="mobileNumber">Mobile Number*</label>
-          <div class="mobile-input-group">
-            <select name="countryCode" class="country-select">
-              <option value="+91">India +91</option>
-              <option value="+1">USA +1</option>
-              <option value="+44">UK +44</option>
-            </select>
-            <input type="tel" name="mobileNumber" id="mobileNumber" required>
-          </div>
-        </div>
-
-        <div>
-          <label for="message">Message*</label>
-          <textarea name="message" id="message" required></textarea>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="submit-btn">Submit</button>
-        </div>
-      </form>
-
-      <div id="form-success" class="form-success" hidden>
-        <h3>Transmission Received!</h3>
-        <p>Your request has been logged. Our flight crew will contact you shortly.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <header id="main-header">
-    <div class="logo-container">
-      <img src="logo.png" alt="Astrobase Logo" class="logo-img">
-      <div class="brand-wrapper">
-        <div class="brand-name">Astrobase</div>
-        <div class="brand-sub">Ecom Services</div>
+      <!-- Mobile Hamburger -->
+      <div class="mobile-toggle" id="mobile-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
     </div>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#why-astrobase">Why Us</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-theme-wrapper"
+        style="padding: 20px 30px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; justify-content: space-between; align-items: center;">
+        <span style="color: var(--text-white); font-weight: bold;">Theme</span>
+        <button id="mobile-theme-toggle" class="theme-btn" aria-label="Toggle Theme"
+          style="background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--primary-gold);">
+          <span id="mobile-theme-icon">☀️</span>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#path-to-excellence">About Us</a></li>
+        <li class="mobile-has-dropdown">
+          <a href="#" class="mobile-dropdown-toggle">Services <span class="toggle-icon">+</span></a>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="#digital-marketing">Digital Marketing</a></li>
+            <li class="mobile-has-dropdown">
+              <a href="#" class="mobile-dropdown-toggle">Marketplace Management <span class="toggle-icon">+</span></a>
+              <ul class="mobile-dropdown-menu">
+                <li><a href="#marketplace">Amazon</a></li>
+                <li><a href="#marketplace">Flipkart</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="padding: 20px 30px;"><a href="#contact" class="btn-primary mobile-cta-btn"
+            style="padding: 12px; display: block; text-align: center;">Get Consultation</a></li>
+      </ul>
+    </div>
   </header>
 
-  <section class="hero" id="hero">
+  <!-- Hero Section (Matches Wellsure Hero) -->
+  <section class="hero-section" id="hero">
+    <!-- Starfield Animation Background -->
     <div class="space-background" aria-hidden="true">
       <div class="stars-layer layer-1"></div>
       <div class="stars-layer layer-2"></div>
       <div class="stars-layer layer-3"></div>
     </div>
 
-    <div class="hero-content" id="hero-text-content">
-      <h1>Launch Your Brand Into Orbit</h1>
-      <p class="hero-sub">
-        We provide the propulsion systems for your Amazon, Flipkart, and Digital Marketing growth.
-        Mission control for your e-commerce success.
-      </p>
-      <button class="cta-btn" id="launch-button" aria-haspopup="dialog" aria-controls="launch-overlay">Initiate Launch
-        Sequence</button>
-    </div>
-
-    <div class="rocket-container" id="hero-rocket-container" aria-hidden="true">
-      <div class="rocket-shaker">
-        <div class="rocket-fire" aria-hidden="true">
-          <div class="flame-core"></div>
-          <div class="flame-outer"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Empowering Your Business in the <span>Digital Space</span></h1>
+        <p class="hero-description">Smart, scalable solutions to build your brand, boost your presence, and launch your
+          e-commerce growth into orbit.</p>
+        <div class="hero-buttons">
+          <a href="#path-to-excellence" class="btn-primary">Discover More</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
         </div>
-        <img src="rocket-removebg-preview.png" alt="Rocket" class="rocket-img">
+      </div>
+      <!-- Rocket Animation Removed as requested -->
+    </div>
+  </section>
+
+  <!-- Path To Excellence (4 Icon Cards layout) -->
+  <section class="excellence-section" id="path-to-excellence">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Discover Our Path to Excellence</h2>
+        <p class="section-subtitle">We follow a proven trajectory to ensure your brand reaches its destination.</p>
+      </div>
+
+      <div class="grid-4-cols">
+        <!-- Feature 1 -->
+        <div class="feature-card reveal-card">
+          <div class="icon-wrapper">
+            <span class="icon">💡</span>
+          </div>
+          <h3 class="feature-title">Innovative Strategy</h3>
+          <p class="feature-desc">Out-of-the-box courses for growth tailored to your specific market conditions.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card reveal-card">
+          <div class="icon-wrapper">
+            <span class="icon">🎨</span>
+          </div>
+          <h3 class="feature-title">Stellar Creativity</h3>
+          <p class="feature-desc">Design-forward campaigns and store builds that capture customer attention natively.
+          </p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-card reveal-card">
+          <div class="icon-wrapper">
+            <span class="icon">⚙️</span>
+          </div>
+          <h3 class="feature-title">High-Thrust Productivity</h3>
+          <p class="feature-desc">Our team and operations are tuned for optimal delivery speed and quality.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-card reveal-card">
+          <div class="icon-wrapper">
+            <span class="icon">🎧</span>
+          </div>
+          <h3 class="feature-title">Rapid Response</h3>
+          <p class="feature-desc">Dedicated support base providing fast incident turnaround and clear communication.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="why-astrobase" id="why-astrobase">
-    <h2 class="section-title">Why Choose Astrobase?</h2>
-    <div class="why-grid">
-      <div class="reveal-card">
-        <div class="card-icon">💡</div>
-        <h3>Innovative Trajectories</h3>
-        <p>Out-of-the-box strategic courses for growth.</p>
+  <!-- Solutions Split Section (Text + Image/Graphics) -->
+  <section class="solutions-section" id="solutions">
+    <div class="container solutions-container">
+      <div class="solutions-content reveal-card">
+        <h2 class="section-title">Solutions to Move Your Business Forward</h2>
+        <p class="content-text">Whether you need a complete overhaul of your digital strategy or specialized catalog
+          management, Astrobase provides the thrust needed to escape conventional gravity.</p>
+        <ul class="check-list">
+          <li>End-to-End E-Commerce Strategy</li>
+          <li>Data-Driven Performance Metrics</li>
+          <li>Scalable Architecture Consulting</li>
+        </ul>
+        <a href="#contact" class="btn-primary mt-4">Start Your Journey</a>
       </div>
-      <div class="reveal-card">
-        <div class="card-icon">🎨</div>
-        <h3>Stellar Creativity</h3>
-        <p>Design-forward campaigns that stand out.</p>
-      </div>
-      <div class="reveal-card">
-        <div class="card-icon">🚀</div>
-        <h3>High-Thrust Productivity</h3>
-        <p>Team and processes tuned for delivery.</p>
-      </div>
-      <div class="reveal-card">
-        <div class="card-icon">🎧</div>
-        <h3>Rapid Response</h3>
-        <p>Fast incident turnaround and support.</p>
+      <div class="solutions-image reveal-card">
+        <!-- Placeholder for a space-themed graphic -->
+        <div class="abstract-graphic">
+          <div class="orbit-ring"></div>
+          <div class="planet-core"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="services" id="services">
-    <h2 class="section-title">Our Expert Services</h2>
-    <div class="services-grid" id="services-grid">
-      <div class="reveal-card" data-service="E-Commerce Orbit">
-        <div class="card-icon">🛒</div>
-        <h3>E-Commerce Orbit</h3>
-        <p>End-to-end account management for Amazon & Flipkart. We handle cataloging and account health.</p>
+  <!-- Marketplace Management Section -->
+  <section class="service-category-section alt-bg" id="marketplace">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Marketplace Management</h2>
+        <p class="section-subtitle">We manage the complex ecosystems of Amazon and Flipkart so you can focus on product.
+        </p>
       </div>
-      <div class="reveal-card" data-service="Digital Propulsion">
-        <div class="card-icon">📡</div>
-        <h3>Digital Propulsion</h3>
-        <p>SEO, SMM and PPC campaigns to boost reach and conversions.</p>
+
+      <div class="grid-2-cols" style="margin-bottom: 60px;">
+        <div class="service-card reveal-card">
+          <h3 class="card-title">Amazon Orbit Management</h3>
+          <p>Complete A to Z cataloging, account health monitoring, A+ content creation, and buy-box optimization
+            strategies.</p>
+        </div>
+        <div class="service-card reveal-card">
+          <h3 class="card-title">Flipkart Scaling</h3>
+          <p>Strategic promotions, listing optimizations, and ad campaign management tailored for the Flipkart
+            marketplace.</p>
+        </div>
       </div>
-      <div class="reveal-card" data-service="Web Launchpads">
-        <div class="card-icon">💻</div>
-        <h3>Web Launchpads</h3>
-        <p>Shopify & WordPress builds with UX optimised for conversion.</p>
+    </div>
+  </section>
+  <!-- Next section divider -->
+
+  <!-- Digital Marketing Section -->
+  <section class="service-category-section" id="digital-marketing">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Digital Propulsion & Web</h2>
+        <p class="section-subtitle">Drive targeted traffic and convert visitors with our comprehensive digital services.
+        </p>
       </div>
-      <div class="reveal-card" data-service="Strategic Trajectory">
-        <div class="card-icon">🔭</div>
-        <h3>Strategic Trajectory</h3>
-        <p>Market analysis and strategy to discover new growth channels.</p>
+
+      <div class="grid-3-cols">
+        <div class="service-card reveal-card">
+          <h3 class="card-title">SEO Optimization</h3>
+          <p>Rank higher in organic search results. We optimize technical structure and content authority.</p>
+        </div>
+        <div class="service-card reveal-card">
+          <h3 class="card-title">PPC Campaigns</h3>
+          <p>High ROI paid advertising on Google and Social Media. Data-driven targeting for maximum conversion.</p>
+        </div>
+        <div class="service-card reveal-card">
+          <h3 class="card-title">Web Launchpads</h3>
+          <p>Custom Shopify and WordPress development. Fast, responsive, and designed for e-commerce success.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <div class="footer-content"
-      style="display:flex; justify-content:space-around; flex-wrap:wrap; max-width:1100px; margin:0 auto; gap:30px;">
-      <div class="footer-col brand-col" style="flex:1; min-width:250px;">
+  <!-- Our Exclusive Services (Formerly Account Management) -->
+  <section class="account-mgmt-section alt-bg" id="exclusive-services">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Our Exclusive Services</h2>
+        <p class="section-subtitle">Comprehensive daily assistance to scale your e-commerce presence.</p>
+      </div>
 
-        <div class="logo-container" style="margin-bottom:20px;">
-          <img src="logo.png" alt="Astrobase Logo" class="logo-img">
-          <div class="brand-wrapper">
-            <div class="brand-name">Astrobase</div>
-            <div class="brand-sub">Ecom Services</div>
+      <div class="mgmt-content">
+        <div class="mgmt-list reveal-card">
+          <ul class="custom-list">
+            <li><strong>Daily Assistance:</strong> Order management, Sponsor Products, FBA/FBF shipments, Seller buyer
+              messages, Account health management, MTR reports, Highly Selling ASIN's, Safe-t-Claims.</li>
+            <li><strong>Dedicated Manager:</strong> Coordinate over call and WhatsApp on a daily basis.</li>
+            <li><strong>Order Management:</strong> Guidance on scheduling and packaging to reduce return rates and late
+              dispatches.</li>
+            <li><strong>Sponsor Products:</strong> Strategic advertising to maximize your sales.</li>
+            <li><strong>FBA Shipments:</strong> Complete handling of FBA shipment processes.</li>
+            <li><strong>Seller Buyer Messages:</strong> Prompt responses to all buyer queries on Amazon.in.</li>
+            <li><strong>Account Health:</strong> Continuous monitoring to maintain impeccable account standing.</li>
+            <li><strong>MTR Support:</strong> Merchant Tax Reports provided for seamless tax auditing.</li>
+            <li><strong>Highly Selling ASIN's:</strong> Category-specific data on top-selling products provided by
+              Amazon.</li>
+            <li><strong>Safe-T-Claims:</strong> Claims processed in 1-2 working days to compensate for return losses.
+            </li>
+          </ul>
+        </div>
+
+        <div class="pricing-packages reveal-card">
+          <h3 class="package-title">Choose Your Package</h3>
+          <div class="package-cards">
+            <div class="package-card">
+              <h4>1 Month</h4>
+              <div class="price">₹5,900</div>
+              <div class="price-calc">(₹5000 + 18% GST)</div>
+            </div>
+            <div class="package-card">
+              <h4>3 Months</h4>
+              <div class="price">₹10,620</div>
+              <div class="price-calc">(₹9000 + 18% GST)</div>
+            </div>
+            <div class="package-card featured">
+              <h4>6 Months</h4>
+              <div class="price">₹17,700</div>
+              <div class="price-calc">(₹15000 + 18% GST)</div>
+              <div class="bonus">+ 1 Month Extra</div>
+            </div>
+            <div class="package-card">
+              <h4>12 Months</h4>
+              <div class="price">₹35,400</div>
+              <div class="price-calc">(₹30000 + 18% GST)</div>
+              <div class="bonus">+ 2 Months Extra</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section alt-bg" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Client Feedback</h2>
+        <p class="section-subtitle">Transmissions from our successful missions.</p>
+      </div>
+
+      <div class="grid-3-cols">
+        <div class="testimonial-card reveal-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"Astrobase Ecom Services made our Amazon onboarding completely seamless. They quickly
+            secured our brand and category approvals, leading to an immediate and significant boost in our sales!"
+
+          </p>
+          <div class="client-info">
+            <strong>ARON MUSIC.</strong>
+            <span>Amazon Seller </span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"Expert Amazon onboarding and lightning-fast brand approval! Astrobase Ecom Services
+            provided the exact strategy and execution we needed for a massive online sales boost."
+
+          </p>
+          <div class="client-info">
+            <strong>SOFT GLOBE INTERNATIONAL.</strong>
+            <span></span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"They took the headache out of Amazon selling. From quick brand and category approvals
+            to smooth onboarding, Astrobase Ecom Services truly skyrocketed our daily sales."
+          </p>
+          <div class="client-info">
+            <strong>GOPAL SALES</strong>
+            <span>Amazon Seller</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Footer Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper reveal-card">
+          <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Get in Touch with Us!</h2>
+          <form id="service-quote-form" class="modern-form">
+            <div class="form-group-row">
+              <div class="form-group half">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name*" required>
+              </div>
+              <div class="form-group half">
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="businessEmail" id="businessEmail" placeholder="Business Email*" required>
+            </div>
+            <div class="form-group">
+              <select name="service" id="service-select" required>
+                <option value="" disabled selected>Select Service*</option>
+                <option value="Marketplace Management">Marketplace Management</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group mobile-input-group">
+              <select name="countryCode" class="country-select">
+                <option value="+91">+91 (IN)</option>
+                <option value="+1">+1 (US)</option>
+                <option value="+44">+44 (UK)</option>
+              </select>
+              <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number*" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" id="message" rows="4" placeholder="Your Message*" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width" id="submit-quote-btn">Send Message</button>
+            <div id="form-success" class="form-success-msg"
+              style="display:none; margin-top:15px; color:var(--primary-gold);">Transmission Received! We will contact
+              you shortly.</div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper reveal-card">
+          <h3 class="info-title">Headquarters</h3>
+          <div class="info-block">
+            <a href="https://share.google/ehWt8ZnZrWfxUNTeJ" target="_blank" class="info-text">
+              3rd Floor, M.H. Tower, Tonk Rd, opp. Sector 3,
+              Sanganer, Pratap Nagar, Jaipur, Rajasthan 302033.
+            </a>
+          </div>
+
+          <div class="info-block">
+            <h4>Mail:</h4>
+            <a href="mailto:Info@astrobaseecomservices.com">Info@astrobaseecomservices.com</a>
+          </div>
+
+          <div class="info-block">
+            <h4>Phone Number:</h4>
+            <a href="tel:+918384975889">+91 8384975889</a>
+          </div>
+
+          <div class="social-links mt-4">
+            <a href="https://wa.link/bygtt1" class="social-icon" target="_blank" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/astrobase-ecom-services-aa3820396/" class="social-icon" target="_blank"
+              aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
           </div>
         </div>
 
-        <p>Your mission control for e-commerce success. We help businesses launch, grow, and dominate in the digital
-          space.</p>
-      </div>
-      <div class="footer-col" style="flex:0.5; min-width:150px;">
-        <h4 style="color:#fff; margin-bottom:15px;">Quick Links</h4>
-        <ul style="list-style:none; padding:0;">
-          <li style="margin-bottom:10px;"><a href="#hero" style="color:#aaa; text-decoration:none;">Home</a></li>
-          <li style="margin-bottom:10px;"><a href="#why-astrobase" style="color:#aaa; text-decoration:none;">About
-              Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col" style="flex:1; min-width:250px;">
-        <h4 style="color:#fff; margin-bottom:15px;">Mission Contact</h4>
-        <ul class="contact-info" style="list-style:none; padding:0;">
-          <li style="margin-bottom:10px;"><span class="contact-icon">📞</span><span>+91 8384975889</span></li>
-          <li style="margin-bottom:10px;"><span class="contact-icon">📍</span><span><a
-                href="https://maps.app.goo.gl/JsQxTP1K5bXemXwH7"
-                style="color:var(--primary-gold); text-decoration:none;">3rd Floor, M.H. Tower, Tonk Rd, opp. Sector 3,
-                Sanganer, Pratap Nagar, Jaipur, Rajasthan 302033.</a></span></li>
-          <li style="margin-bottom:10px;"><span class="contact-icon">✉️</span><span><a
-                href="mailto:Info@astrobaseecomservices.com"
-                style="color:var(--primary-gold); text-decoration:none;">Info@astrobaseecomservices.com</a></span></li>
-        </ul>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <p>&copy; 2025 Astrobase Ecom Services. All systems nominal. Ready for liftoff.</p>
+  <!-- Site Footer Baseline -->
+  <footer class="site-footer-bottom">
+    <div class="container footer-bottom-flex">
+      <p>&copy; 2026 Astrobase E-Commerce Services. All rights reserved.</p>
+
     </div>
   </footer>
 
