@@ -900,6 +900,29 @@ body.light-mode .modern-form textarea:focus {
   color: var(--primary-gold);
 }
 
+.footer-about h3 {
+  color: var(--primary-gold);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.footer-about p {
+  color: var(--text-grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer-about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Light Mode Overrides for Footer */
+body.light-mode .footer-about p {
+  color: #666666;
+  /* Slightly lighter than the heavy #444444 to stand out while still readable */
+}
+
 /* =========================================
    Account Management Services
 ========================================= */
