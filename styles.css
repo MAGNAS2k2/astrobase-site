@@ -1075,8 +1075,11 @@ body.light-mode .footer-about p {
     padding: 15px 20px;
   }
 
-  .desktop-nav,
-  .header-actions {
+  .desktop-nav {
+    display: none;
+  }
+
+  .header-actions .header-btn {
     display: none;
   }
 
